@@ -1,0 +1,10 @@
+<div *ngIf="projects">
+  <div *ngFor="let project of projects">
+    <h4>{{project.name}}</h4>
+    <p>{{project.description}}</p>
+    enlaces:
+    <ng-container *ngIf="project.links.length > 0">
+      <a *ngFor="let link of project.links" [href]="link.direction" target="_black">{{link.name}}</a>
+    </ng-container>
+  </div>
+</div>

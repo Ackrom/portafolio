@@ -1,0 +1,16 @@
+<div>
+  <div>
+    Contactenme:
+    <form action="#">
+      <label for="title">Título</label>
+      <br>
+      <input type="text" name="title">
+      <br>
+      <br>
+      <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+    </form>
+    <ng-container *ngIf="socialLinks">
+      <a [href]="link.direction" target="_blank" *ngFor="let link of socialLinks">{{link.name}}</a>
+    </ng-container>
+  </div>
+</div>

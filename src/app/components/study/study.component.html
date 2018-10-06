@@ -1,0 +1,13 @@
+<div>
+  <div *ngIf="studies">
+    <div *ngFor="let study of studies">
+      <h3>{{study.name}}</h3>
+      <p>Institución que lo acredita:</p>
+      <h4>{{study.institution}}</h4>
+      enlaces:
+      <ng-container *ngIf="study.links.length > 0">  
+        <a [href]="link.direction" target="_blank" *ngFor="let link of study.links">{{link.name}}</a>
+      </ng-container>
+    </div>
+  </div>
+</div>
