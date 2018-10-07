@@ -14,6 +14,7 @@ export class CodeProjectsComponent implements OnInit {
   private projects:Project[]
 
   ngOnInit() {
+    // this.portfolio.setDefaultprojects();
     this.portfolio.getProjects()
     .subscribe((data)=>{
       console.log("CodeProjectsComponent");

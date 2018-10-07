@@ -14,6 +14,7 @@ export class TecnologyAndToolsComponent implements OnInit {
   private toolsOrTecnologies:ToolOrTecnology[];
 
   ngOnInit() {
+    // this.curriculum.setDefaultTecnologyOrTool();
     this.curriculum.getToolsOrTecnologies()
     .subscribe((data)=>{
       console.log("TecnologyAndToolsComponent");

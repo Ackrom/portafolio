@@ -1,10 +1,8 @@
 <div>
   <div>
-    <div>
+    <div *ngIf="summary">
       <h4>{{summary.title}}</h4>
-      <p [innerHTML]="summary.content">
-
-      </p>
+      <p [innerHTML]="summary.content"></p>
     </div>
   </div>
 </div>

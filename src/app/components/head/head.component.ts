@@ -14,11 +14,12 @@ export class HeadComponent implements OnInit {
   private myInfo:PersonalInformation;
 
   ngOnInit() {
+    // this.util.setDefaultPersonalInformation();
     this.util.getPersonalInformation()
     .subscribe((data)=>{
-      console.log("HeadComponent");
-      console.log(data);
-      this.myInfo = data;
+      // console.log("HeadComponent");
+      // console.log(data);
+      this.myInfo = data[0];
     },
     (error)=>{console.log("HeadComponent");console.log(error);});
   }

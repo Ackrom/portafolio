@@ -14,10 +14,11 @@ export class ContactComponent implements OnInit {
   private socialLinks:SocialNetwork[];
 
   ngOnInit() {
+    // this.utils.setDefaultSocialNetworks();
     this.utils.getSocialNetworks()
     .subscribe((data)=>{
-      console.log("ContactComponent");
-      console.log(data);
+      // console.log("ContactComponent");
+      // console.log(data);
       this.socialLinks = data;
     },
     (error)=>{console.log("ContactComponent");console.log(error);});

@@ -18,7 +18,7 @@ export class CurriculumComponent implements OnInit {
     .subscribe((data)=>{
       console.log("CurriculumComponent");
       console.log(data);
-      this.curriculumLink = data.curriculumLink
+      this.curriculumLink = data[0].curriculumLink
     },
     (error)=>{console.log("CurriculumComponent");console.log(error);});
   }

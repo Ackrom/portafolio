@@ -14,11 +14,12 @@ export class ResumeComponent implements OnInit {
   private summary:Summary
 
   ngOnInit() {
+    // this.curriculum.setDefaultSummary();
     this.curriculum.getSummary()
     .subscribe((data)=>{
       console.log("ResumeComponent");
       console.log(data);
-      this.summary = data;
+      this.summary = data[0];
     },
     (error)=>{console.log("ResumeComponent");console.log(error);});
   }

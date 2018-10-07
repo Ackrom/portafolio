@@ -18,6 +18,10 @@ import { CurriculumComponent } from './pages/curriculum/curriculum.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { MenuComponent } from './pages/menu/menu.component';
 
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestore } from "@angular/fire/firestore";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +37,10 @@ import { MenuComponent } from './pages/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    appRouting
+    appRouting,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

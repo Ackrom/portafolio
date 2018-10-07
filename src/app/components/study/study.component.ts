@@ -14,6 +14,7 @@ export class StudyComponent implements OnInit {
   private studies:Study[];
 
   ngOnInit() {
+    // this.curriculum.setDefaultStydies();
     this.curriculum.getStudies()
     .subscribe((data)=>{
       console.log("StudyComponent");
