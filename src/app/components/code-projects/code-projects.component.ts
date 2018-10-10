@@ -17,8 +17,8 @@ export class CodeProjectsComponent implements OnInit {
     // this.portfolio.setDefaultprojects();
     this.portfolio.getProjects()
     .subscribe((data)=>{
-      console.log("CodeProjectsComponent");
-      console.log(data);
+      // console.log("CodeProjectsComponent");
+      // console.log(data);
       this.projects = data;
     },
     (error)=>{console.log("CodeProjectsComponent");console.log(error);});

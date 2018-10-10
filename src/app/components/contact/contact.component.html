@@ -1,13 +1,19 @@
 <div>
   <div>
     Contactenme:
-    <form action="#">
-      <label for="title">Título</label>
+    <form action="https://formspree.io/marco.at720@gmail.com" method="POST">
+      <label for="name">Nombre</label>
+      <input type="text" name="name">
       <br>
+      <label for="email">Correo</label>
+      <input type="text" name="email">
+      <br>
+      <label for="title">Asunto</label>
       <input type="text" name="title">
       <br>
+      <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
       <br>
-      <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+      <button type="submit">Enviar</button>
     </form>
     <ng-container *ngIf="socialLinks">
       <a [href]="link.direction" target="_blank" *ngFor="let link of socialLinks">{{link.name}}</a>

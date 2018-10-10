@@ -17,8 +17,8 @@ export class ResumeComponent implements OnInit {
     // this.curriculum.setDefaultSummary();
     this.curriculum.getSummary()
     .subscribe((data)=>{
-      console.log("ResumeComponent");
-      console.log(data);
+      // console.log("ResumeComponent");
+      // console.log(data);
       this.summary = data[0];
     },
     (error)=>{console.log("ResumeComponent");console.log(error);});

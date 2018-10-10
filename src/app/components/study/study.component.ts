@@ -17,8 +17,8 @@ export class StudyComponent implements OnInit {
     // this.curriculum.setDefaultStydies();
     this.curriculum.getStudies()
     .subscribe((data)=>{
-      console.log("StudyComponent");
-      console.log(data);
+      // console.log("StudyComponent");
+      // console.log(data);
       this.studies = data;
     },
     (error)=>{console.log("StudyComponent");console.log(error);});

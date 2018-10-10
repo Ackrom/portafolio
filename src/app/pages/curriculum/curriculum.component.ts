@@ -16,8 +16,8 @@ export class CurriculumComponent implements OnInit {
   ngOnInit() {
     this.utils.getPersonalInformation()
     .subscribe((data)=>{
-      console.log("CurriculumComponent");
-      console.log(data);
+      // console.log("CurriculumComponent");
+      // console.log(data);
       this.curriculumLink = data[0].curriculumLink
     },
     (error)=>{console.log("CurriculumComponent");console.log(error);});

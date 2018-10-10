@@ -17,8 +17,8 @@ export class TecnologyAndToolsComponent implements OnInit {
     // this.curriculum.setDefaultTecnologyOrTool();
     this.curriculum.getToolsOrTecnologies()
     .subscribe((data)=>{
-      console.log("TecnologyAndToolsComponent");
-      console.log(data);
+      // console.log("TecnologyAndToolsComponent");
+      // console.log(data);
       this.toolsOrTecnologies = data;
     },
     (error)=>{console.log("TecnologyAndToolsComponent");console.log(error);});
