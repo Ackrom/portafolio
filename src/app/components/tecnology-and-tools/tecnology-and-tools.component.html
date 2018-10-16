@@ -1,9 +1,18 @@
-<div *ngIf="toolsOrTecnologies">
-  <div *ngFor="let TOT of toolsOrTecnologies">
-    <h3>{{TOT.name}}</h3>
-    Descripción:
-    <p>{{TOT.description}}</p>
-    Experiencia:
-    <p>{{TOT.experience}}</p>
+<div class="columns" >
+  <div class="column" *ngIf="toolsOrTecnologies" >
+    <h4 class="title is-4">Tecnologías o herramientas</h4>
+    <div class="box" style="height:400px; overflow-y: scroll;">
+      <div class="box" *ngFor="let TOT of toolsOrTecnologies">
+        <h5 class="title is-5">{{TOT.name}}</h5>
+        <h5 class="title is-5">
+          Descripción:
+        </h5>
+        <p class="content">{{TOT.description}}</p>
+        <h5 class="title is-5">
+          Experiencia:
+        </h5>
+        <p class="content">{{TOT.experience}}</p>
+      </div>
+    </div>
   </div>
 </div>

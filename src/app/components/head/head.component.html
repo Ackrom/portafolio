@@ -1,6 +1,8 @@
-<div>
-  <div *ngIf="myInfo">
-    <h1>{{myInfo.fullName}}</h1>
-    <h2>{{myInfo.phrase}}</h2>
+<div class="container is-fullhd">
+  <div class="has-text-centered hero" *ngIf="myInfo">
+    <div class="hero-body">
+      <h1 class="title">{{myInfo.fullName}}</h1>
+      <h2 class="subtitle">{{myInfo.phrase}}</h2>
+    </div>
   </div>
 </div>

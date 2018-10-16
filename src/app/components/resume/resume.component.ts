@@ -22,6 +22,7 @@ export class ResumeComponent implements OnInit {
       this.summary = data[0];
     },
     (error)=>{console.log("ResumeComponent");console.log(error);});
+    console.log("Resume onInit");
   }
 
 }

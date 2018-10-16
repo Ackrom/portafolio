@@ -4,7 +4,13 @@ import { NgModule } from '@angular/core';
 // ROUTER
 import { appRouting } from "./app-routing";
 
-// COMPONETS
+// ICONS
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
+// COMPONENTS
 import { AppComponent } from './app.component';
 import { StudyComponent } from './components/study/study.component';
 import { TecnologyAndToolsComponent } from './components/tecnology-and-tools/tecnology-and-tools.component';
@@ -38,7 +44,8 @@ import { AngularFirestore } from "@angular/fire/firestore";
   imports: [
     BrowserModule,
     appRouting,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    FontAwesomeModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

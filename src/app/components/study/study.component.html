@@ -1,13 +1,16 @@
-<div>
-  <div *ngIf="studies">
-    <div *ngFor="let study of studies">
-      <h3>{{study.name}}</h3>
-      <p>Institución que lo acredita:</p>
-      <h4>{{study.institution}}</h4>
-      enlaces:
-      <ng-container *ngIf="study.links.length > 0">  
-        <a [href]="link.direction" target="_blank" *ngFor="let link of study.links">{{link.name}}</a>
-      </ng-container>
+<div class="columns" >
+  <div class="column"  *ngIf="studies">
+    <h4 class="title is-4">Estudios</h4>
+    <div class="box" style="height:400px; overflow-y: scroll;">
+      <div class="box" *ngFor="let study of studies">
+        <h5 class="title is-5">{{study.name}}</h5>
+        <h5 class="title is-5">Institución que lo acredita:</h5>
+        <h5 class="title is-5">{{study.institution}}</h5>
+        <span class="has-text-weight-semibold">Enlaces: &nbsp;</span> 
+        <ng-container *ngIf="study.links.length > 0">  
+          <a [href]="link.direction" target="_blank" *ngFor="let link of study.links">{{link.name}}</a>&nbsp;
+        </ng-container>
+    </div>
     </div>
   </div>
 </div>

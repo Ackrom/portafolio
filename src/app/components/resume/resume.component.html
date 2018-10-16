@@ -1,8 +1,6 @@
-<div>
-  <div>
-    <div *ngIf="summary">
-      <h4>{{summary.title}}</h4>
-      <p [innerHTML]="summary.content"></p>
-    </div>
+<div class="columns">
+  <div class="column" *ngIf="summary">
+    <h4 class="title is-4">{{summary.title}}</h4>
+    <p class="content has-text-justified" [innerHTML]="summary.content"></p>
   </div>
 </div>
