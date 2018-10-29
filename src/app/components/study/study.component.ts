@@ -15,11 +15,14 @@ export class StudyComponent implements OnInit {
 
   ngOnInit() {
     // this.curriculum.setDefaultStydies();
+    if(localStorage.getItem('studies') !== null)
+      this.studies = JSON.parse(localStorage.getItem('studies'));
     this.curriculum.getStudies()
     .subscribe((data)=>{
       // console.log("StudyComponent");
       // console.log(data);
       this.studies = data;
+      localStorage.setItem('studies',JSON.stringify(data));
     },
     (error)=>{console.log("StudyComponent");console.log(error);});
   }

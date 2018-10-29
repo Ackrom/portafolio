@@ -14,12 +14,16 @@ export class ContactComponent implements OnInit {
   private socialLinks:SocialNetwork[];
 
   ngOnInit() {
+    if(localStorage.getItem('socialLinks') !== null)
+      this.socialLinks = JSON.parse(localStorage.getItem('socialLinks'));
     // this.utils.setDefaultSocialNetworks();
     this.utils.getSocialNetworks()
     .subscribe((data)=>{
       // console.log("ContactComponent");
       // console.log(data);
       this.socialLinks = data;
+      
+      localStorage.setItem('socialLinks',JSON.stringify(data));
     },
     (error)=>{console.log("ContactComponent");console.log(error);});
   }

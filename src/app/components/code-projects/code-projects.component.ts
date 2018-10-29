@@ -14,12 +14,16 @@ export class CodeProjectsComponent implements OnInit {
   private projects:Project[]
 
   ngOnInit() {
+    if(localStorage.getItem('projects') !== null)
+      this.projects = JSON.parse(localStorage.getItem('projects'));
     // this.portfolio.setDefaultprojects();
     this.portfolio.getProjects()
     .subscribe((data)=>{
       // console.log("CodeProjectsComponent");
       // console.log(data);
       this.projects = data;
+      
+      localStorage.setItem('projects',JSON.stringify(data));
     },
     (error)=>{console.log("CodeProjectsComponent");console.log(error);});
   }

@@ -14,12 +14,16 @@ export class HeadComponent implements OnInit {
   private myInfo:PersonalInformation;
 
   ngOnInit() {
+    if(localStorage.getItem('myInfo') !== null)
+      this.myInfo = JSON.parse(localStorage.getItem('myInfo'));
     // this.util.setDefaultPersonalInformation();
     this.util.getPersonalInformation()
     .subscribe((data)=>{
       // console.log("HeadComponent");
       // console.log(data);
       this.myInfo = data[0];
+      
+      localStorage.setItem('myInfo',JSON.stringify(data[0]));
     },
     (error)=>{console.log("HeadComponent");console.log(error);});
   }

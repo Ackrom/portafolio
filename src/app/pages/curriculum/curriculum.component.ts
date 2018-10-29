@@ -14,11 +14,15 @@ export class CurriculumComponent implements OnInit {
   private curriculumLink:string;
 
   ngOnInit() {
+    if(localStorage.getItem('curriculumLink') !== null)
+      this.curriculumLink = JSON.parse(localStorage.getItem('curriculumLink'));
     this.utils.getPersonalInformation()
     .subscribe((data)=>{
       // console.log("CurriculumComponent");
       // console.log(data);
       this.curriculumLink = data[0].curriculumLink
+      
+      localStorage.setItem('curriculumLink',JSON.stringify(data[0].curriculumLink));
     },
     (error)=>{console.log("CurriculumComponent");console.log(error);});
   }

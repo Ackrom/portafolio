@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, } from 'rxjs';
+
 //models
 import { Study } from '../models/Study';
 import { Summary } from '../models/Summary';
@@ -39,7 +40,6 @@ export class CurriculumService {
   getStudies():Observable<Study[]>{
     return this.studyItems;
   }
-
   getSummary():Observable<Summary[]>{
     return this.summaryItems;
   }

@@ -23,10 +23,15 @@ import { HeadComponent } from './components/head/head.component';
 import { CurriculumComponent } from './pages/curriculum/curriculum.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+
 
 import { environment } from "../environments/environment";
+// FIREBASE
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +44,9 @@ import { AngularFirestore } from "@angular/fire/firestore";
     HeadComponent,
     CurriculumComponent,
     PortfolioComponent,
-    MenuComponent
+    MenuComponent,
+    ContactPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
