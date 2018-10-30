@@ -31,6 +31,7 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PortfolioComponent,
     MenuComponent,
     ContactPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
