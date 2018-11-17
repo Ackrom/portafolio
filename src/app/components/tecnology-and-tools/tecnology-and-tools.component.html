@@ -4,12 +4,12 @@
 
     <div class="tabs is-small is-centered is-toggle is-toggle-rounded">
       <ul>
-        <li class="is-active">
+        <li [ngClass]="active?'is-active':''" (click)="changeTab()">
           <a>
             <span class="icon is-small"><fa-icon icon="list"></fa-icon></span>
           </a>
         </li>
-        <li>
+        <li [ngClass]="!active?'is-active':''" (click)="changeTab()">
           <a>
             <span class="icon is-small"><fa-icon icon="th-large"></fa-icon></span>
           </a>
@@ -18,17 +18,63 @@
     </div>
 
 
-    <div class="box" *ngFor="let TOT of toolsOrTecnologies">
-      <h5 class="title is-5">{{TOT.name}}</h5>
-      <h5 class="title is-5">
-        Descripción:
-      </h5>
-      <p class="content">{{TOT.description}}</p>
-      <h5 class="title is-5">
-        Experiencia:
-      </h5>
-      <p class="content">{{TOT.experience}}</p>
+    <div *ngIf="active">
+      <div class="box" *ngFor="let TOT of toolsOrTecnologies">
+        <h5 class="title is-5">{{TOT.name}}</h5>
+        <h5 class="title is-5">
+          Descripción:
+        </h5>
+        <p class="content">{{TOT.description}}</p>
+        <h5 class="title is-5">
+          Experiencia:
+        </h5>
+        <p class="content">{{TOT.experience}}</p>
+      </div>
     </div>
 
+    <div class="tile is-ancestor" *ngIf="columns && !active">
+      <div class="tile is-parent is-vertical is-4" >
+        <div class="tile is-child  is-12  box" *ngFor="let TOT of columns[2]">
+            <h5 class="title is-5">{{TOT.name}}</h5>
+            <h5 class="title is-5">
+              Descripción:
+            </h5>
+            <p class="content">{{TOT.description}}</p>
+            <h5 class="title is-5">
+              Experiencia:
+            </h5>
+            <p class="content">{{TOT.experience}}</p>
+        </div>
+      </div>
+  
+      <div class="tile is-parent is-vertical is-4" >
+        <div class="tile is-child  is-12  box" *ngFor="let TOT of columns[1]">
+            <h5 class="title is-5">{{TOT.name}}</h5>
+            <h5 class="title is-5">
+              Descripción:
+            </h5>
+            <p class="content">{{TOT.description}}</p>
+            <h5 class="title is-5">
+              Experiencia:
+            </h5>
+            <p class="content">{{TOT.experience}}</p>
+        </div>
+      </div>
+  
+      <div class="tile is-parent is-vertical is-4" >
+        <div class="tile is-child  is-12  box" *ngFor="let TOT of columns[0]">
+            <h5 class="title is-5">{{TOT.name}}</h5>
+            <h5 class="title is-5">
+              Descripción:
+            </h5>
+            <p class="content">{{TOT.description}}</p>
+            <h5 class="title is-5">
+              Experiencia:
+            </h5>
+            <p class="content">{{TOT.experience}}</p>
+        </div>
+      </div>
+    </div>
   </div>
+  
 </div>
