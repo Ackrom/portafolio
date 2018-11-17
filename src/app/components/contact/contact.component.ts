@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilsService } from '../../services/utils.service';
 import { SocialNetwork } from '../../models/SocialNetwork';
+import { faTwitter,faFacebook,faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,9 @@ export class ContactComponent implements OnInit {
   constructor(private utils:UtilsService) { }
 
   private socialLinks:SocialNetwork[];
+  twitter = faTwitter;
+  face = faFacebook;
+  link = faLinkedin;
 
   ngOnInit() {
     if(localStorage.getItem('socialLinks') !== null)

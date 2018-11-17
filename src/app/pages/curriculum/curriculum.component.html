@@ -1,8 +1,8 @@
-<section class="hero is-info is-medium">
+<section class="hero is-medium is-info is-bold">
     <div class="hero-body">
         <div class="container">
         <h1 class="title">
-            Curriculum
+            Curriculum <a class="button is-text" [href]="curriculumLink">Descargar versión PDF</a>
         </h1>
         <h2 class="subtitle">
             Estudios, tecnologías y herramientas
@@ -13,13 +13,30 @@
 <br>
 <div class="container">
     <div>
-        <h1 class="title is-3 is-inline-block">Curriculum </h1>
-        <a class="button is-text" [href]="curriculumLink">Descargar versión PDF</a>
-    </div>
-    
+        
+    </div>  
     <app-resume></app-resume>
+</div>
+<br>
+<div class="tabs is-centered is-boxed">
+    <ul>
+      <li [ngClass]="active?'is-active':''" (click)="changeTab()">
+        <a>
+          <span class="icon is-small"><fa-icon icon="graduation-cap"></fa-icon></span>
+          <span>Estudios</span>
+        </a>
+      </li>
+      <li [ngClass]="!active?'is-active':''" (click)="changeTab()">
+        <a>
+          <span class="icon is-small"><fa-icon icon="terminal"></fa-icon></span>
+          <span>Tecnologías y herramientas</span>
+        </a>
+      </li>
     
-    <app-study></app-study>
-    <app-tecnology-and-tools></app-tecnology-and-tools>
+    </ul>
+</div>
+<div class="container">
+    <app-study *ngIf="active"></app-study>
+    <app-tecnology-and-tools *ngIf="!active"></app-tecnology-and-tools>
     <hr>
 </div>

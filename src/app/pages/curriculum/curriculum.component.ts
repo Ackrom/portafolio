@@ -12,8 +12,10 @@ export class CurriculumComponent implements OnInit {
   constructor(private _location:Location,private utils:UtilsService) { }
 
   private curriculumLink:string;
+  private active:boolean;
 
   ngOnInit() {
+    this.active = true;
     if(localStorage.getItem('curriculumLink') !== null)
       this.curriculumLink = JSON.parse(localStorage.getItem('curriculumLink'));
     this.utils.getPersonalInformation()
@@ -29,5 +31,7 @@ export class CurriculumComponent implements OnInit {
   goBack(){
     this._location.back();
   }
-
+  changeTab(){
+    this.active = !this.active;
+  }
 }

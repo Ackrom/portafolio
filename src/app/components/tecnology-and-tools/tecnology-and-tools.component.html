@@ -1,18 +1,34 @@
 <div class="columns" >
   <div class="column" *ngIf="toolsOrTecnologies" >
-    <h4 class="title is-4">Tecnologías o herramientas</h4>
-    <div class="box" style="height:400px; overflow-y: scroll;">
-      <div class="box" *ngFor="let TOT of toolsOrTecnologies">
-        <h5 class="title is-5">{{TOT.name}}</h5>
-        <h5 class="title is-5">
-          Descripción:
-        </h5>
-        <p class="content">{{TOT.description}}</p>
-        <h5 class="title is-5">
-          Experiencia:
-        </h5>
-        <p class="content">{{TOT.experience}}</p>
-      </div>
+    <h4 class="title is-4">Tecnologías y herramientas</h4>
+
+    <div class="tabs is-small is-centered is-toggle is-toggle-rounded">
+      <ul>
+        <li class="is-active">
+          <a>
+            <span class="icon is-small"><fa-icon icon="list"></fa-icon></span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <span class="icon is-small"><fa-icon icon="th-large"></fa-icon></span>
+          </a>
+        </li> 
+      </ul>
     </div>
+
+
+    <div class="box" *ngFor="let TOT of toolsOrTecnologies">
+      <h5 class="title is-5">{{TOT.name}}</h5>
+      <h5 class="title is-5">
+        Descripción:
+      </h5>
+      <p class="content">{{TOT.description}}</p>
+      <h5 class="title is-5">
+        Experiencia:
+      </h5>
+      <p class="content">{{TOT.experience}}</p>
+    </div>
+
   </div>
 </div>
