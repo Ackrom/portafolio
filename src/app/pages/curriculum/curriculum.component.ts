@@ -11,8 +11,8 @@ export class CurriculumComponent implements OnInit {
 
   constructor(private _location:Location,private utils:UtilsService) { }
 
-  private curriculumLink:string;
-  private active:boolean;
+  curriculumLink:string;
+  active:boolean;
 
   ngOnInit() {
     this.active = true;

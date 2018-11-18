@@ -11,7 +11,7 @@ export class HeadComponent implements OnInit {
 
   constructor(private util:UtilsService) { }
 
-  private myInfo:PersonalInformation;
+  myInfo:PersonalInformation;
 
   ngOnInit() {
     if(localStorage.getItem('myInfo') !== null)

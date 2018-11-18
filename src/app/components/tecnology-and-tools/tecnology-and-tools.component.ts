@@ -11,9 +11,9 @@ export class TecnologyAndToolsComponent implements OnInit {
 
   constructor(private curriculum:CurriculumService) { }
 
-  private toolsOrTecnologies:ToolOrTecnology[];
-  private columns:ToolOrTecnology[][];
-  private active:boolean;
+  toolsOrTecnologies:ToolOrTecnology[];
+  columns:ToolOrTecnology[][];
+  active:boolean;
 
   ngOnInit() {
     this.active = true;

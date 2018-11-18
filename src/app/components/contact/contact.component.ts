@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
 
   constructor(private utils:UtilsService) { }
 
-  private socialLinks:SocialNetwork[];
+  socialLinks:SocialNetwork[];
   twitter = faTwitter;
   face = faFacebook;
   link = faLinkedin;

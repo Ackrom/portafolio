@@ -11,7 +11,7 @@ export class ResumeComponent implements OnInit {
 
   constructor(private curriculum:CurriculumService) { }
 
-  private summary:Summary
+  summary:Summary
 
   ngOnInit() {
     if(localStorage.getItem('summary') !== null)

@@ -11,7 +11,7 @@ export class CodeProjectsComponent implements OnInit {
 
   constructor(private portfolio:PortfolioService) { }
 
-  private projects:Project[]
+  projects:Project[]
 
   ngOnInit() {
     if(localStorage.getItem('projects') !== null)

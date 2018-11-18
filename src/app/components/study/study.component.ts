@@ -11,9 +11,9 @@ export class StudyComponent implements OnInit {
 
   constructor(private curriculum:CurriculumService) { }
 
-  private studies:Study[];
-  private columns:Study[][];
-  private active:boolean;
+  studies:Study[];
+  columns:Study[][];
+  active:boolean;
 
   ngOnInit() {
     this.active = true;
