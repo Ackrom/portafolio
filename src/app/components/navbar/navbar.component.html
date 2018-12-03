@@ -1,14 +1,22 @@
 <nav class="navbar is-transparent">
-    <div class="navbar-brand">
-      <div class="navbar-item" >
-        <a routerLink=".."><p class="title is-4" >Marco A.T.</p></a>
-      </div>
+
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a routerLink="..">
+        <p class="title is-4">Marco A.T.</p>
+      </a>
     </div>
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" routerLink="curriculum">Curriculum</a>
-        <a class="navbar-item" routerLink="portfolio">Portafolio</a>
-        <a class="navbar-item has-text-info has-text-weight-bold" routerLink="/contacto">Contactar</a>
-      </div>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" (click)="active()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" [class.is-active]="isActive">
+    <div class="navbar-end">
+      <a class="navbar-item" routerLink="curriculum">Curriculum</a>
+      <a class="navbar-item" routerLink="portfolio">Portafolio</a>
+      <a class="navbar-item has-text-info has-text-weight-bold" routerLink="/contacto">Contactar</a>
     </div>
+  </div>
 </nav>

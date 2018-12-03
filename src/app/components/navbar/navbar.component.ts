@@ -9,7 +9,14 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
+  isActive:boolean = false;
+
+
   ngOnInit() {
+  }
+
+  active(){
+    this.isActive = !this.isActive;
   }
 
 }
