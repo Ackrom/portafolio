@@ -1,9 +1,14 @@
-<div class="columns is-mobile is-centered" >
+<div class="columns is-mobile is-centered">
   <div class="column">
-    <div class="has-text-centered hero is-fullheight is-black" *ngIf="myInfo">
-      <div class="hero-body">
+    <div class="has-text-centered hero is-fullheight video" *ngIf="myInfo">
+      <div class="hero-video">
+        <video poster="assets/code.jpg" id="bgvid" playsinline autoplay muted loop>
+          <source src="assets/coding background.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-body has-background-black">
         <div class="container has-text-centered">
-          <h1 class="title">{{myInfo.fullName}}</h1>
+          <h1 class="title has-text-white">{{myInfo.fullName}}</h1>
           <h2 class="subtitle has-text-info">{{myInfo.phrase}}</h2>
         </div>
       </div>
