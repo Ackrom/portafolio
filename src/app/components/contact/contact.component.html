@@ -1,71 +1,76 @@
-<div class="columns">
-  <div class="column is-half">
-    <h4 class="title is-4">A través de las redes sociales.</h4>
-    <div class="buttons" *ngIf="socialLinks">
-      <!-- <a class="button is-info" [href]="link.direction" target="_blank" *ngFor="let link of socialLinks">{{link.name}}</a> -->
-      <a class="button is-link" href="https://www.linkedin.com/in/marco-ignacio-alvarez-tallada-a99747140/" target="_blank" >
-        <span class="icon">
-            <fa-icon [icon]="link"></fa-icon>
-        </span>
-        <span>
-          Linkedin
-        </span>
-      </a>
-      <a class="button is-link" href="https://www.facebook.com/profile.php?id=100008086350253" target="_blank" >
-        <span class="icon">
-            <fa-icon [icon]="face"></fa-icon>
-        </span>
-        <span>
-          Facebook
-        </span>
-      </a>
-      <a class="button is-info" href="https://twitter.com/Marco_AT_" target="_blank" >
-        <span class="icon">
-            <fa-icon [icon]="twitter"></fa-icon>
-        </span>
-        <span>
-          Twitter
-        </span>
-      </a>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <h4 class="title is-4">A través de las redes sociales.</h4>
+        <div class="buttons" *ngIf="socialLinks">
+          <!-- <a class="button is-info" [href]="link.direction" target="_blank" *ngFor="let link of socialLinks">{{link.name}}</a> -->
+          <a class="button is-link" href="https://www.linkedin.com/in/marco-ignacio-alvarez-tallada-a99747140/"
+            target="_blank">
+            <span class="icon">
+              <fa-icon [icon]="link"></fa-icon>
+            </span>
+            <span>
+              Linkedin
+            </span>
+          </a>
+          <a class="button is-link" href="https://www.facebook.com/profile.php?id=100008086350253" target="_blank">
+            <span class="icon">
+              <fa-icon [icon]="face"></fa-icon>
+            </span>
+            <span>
+              Facebook
+            </span>
+          </a>
+          <a class="button is-info" href="https://twitter.com/Marco_AT_" target="_blank">
+            <span class="icon">
+              <fa-icon [icon]="twitter"></fa-icon>
+            </span>
+            <span>
+              Twitter
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-half">
+        <h4 class="title is-4">Envíame un mensaje al correo electrónico rellenando el formulario.</h4>
+
+        <form action="https://formspree.io/marco.at720@gmail.com" method="POST">
+          <div class="field">
+            <label class="label" for="name">Su nombre</label>
+            <div class="control">
+              <input class="input " type="text" name="name">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="email">Su correo</label>
+            <div class="control ">
+              <input class="input " type="email" name="email">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="title">El asunto</label>
+            <div class="control">
+              <input class="input " type="text" name="title">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" name="message" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-link" type="submit">Enviar</button>
+            </div>
+          </div>
+        </form>
+        <hr>
+
+      </div>
+
     </div>
   </div>
-</div>
-<div class="columns">
-  <div class="column is-half">
-    <h4 class="title is-4">Envíame un mensaje al correo electrónico rellenando el formulario.</h4>
-    
-    <form action="https://formspree.io/marco.at720@gmail.com" method="POST">
-      <div class="field">
-        <label class="label" for="name">Su nombre</label>
-        <div class="control">
-          <input class="input " type="text" name="name">
-        </div>
-      </div>
-      <div class="field">
-        <label class="label" for="email">Su correo</label>
-        <div class="control ">
-          <input class="input " type="email" name="email">
-        </div>  
-      </div>
-      <div class="field">
-        <label class="label" for="title">El asunto</label>
-        <div class="control">
-          <input class="input " type="text" name="title">
-        </div>  
-      </div>
-      <div class="field">
-        <div class="control">
-          <textarea class="textarea" name="message" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <button class="button is-link" type="submit">Enviar</button>
-        </div>
-      </div>
-    </form>
-    <hr>
-    
-  </div>
-  
-</div>
+</section>
