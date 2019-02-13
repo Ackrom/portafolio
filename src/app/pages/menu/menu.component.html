@@ -33,13 +33,13 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Graficos en tiempo real con Angular 6 y Socket.io</p>
-                <p class="subtitle is-6">@Ackrom</p>
+                <p class="subtitle is-6"><a href="https://github.com/Ackrom/Graficos-en-tiempo-real-con-Angular-6-y-Socket.io">@Ackrom</a></p>
               </div>
             </div>
 
             <div class="content">
               Práctica que emula una aplicación que usa gráficos actualizables en tiempo real.
-              <a href="#">#Angular6 </a> <a href="#">#Socket.io </a> <a href="#">#Plotly.js </a>
+              <a href="https://angular.io/">#Angular6 </a> <a href="https://socket.io/">#Socket.io </a> <a href="https://plot.ly/javascript/">#Plotly.js </a>
               <br>
               <time datetime="2018-12-3">01:57 PM - 3 Dic. 2018</time>
             </div>
@@ -62,13 +62,13 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Busca minas en Angular 6</p>
-                <p class="subtitle is-6">@Ackrom</p>
+                <p class="subtitle is-6"><a href="https://github.com/Ackrom/Buscaminas-con-Angular-6">@Ackrom</a></p>
               </div>
             </div>
             
             <div class="content">
               El clásico juego del <a href="https://es.wikipedia.org/wiki/Buscaminas">buscaminas</a> usando Angular 6.
-              <a href="#">#Angular6</a>
+              <a href="https://angular.io/">#Angular6 </a>
               <br>
               <time datetime="2018-11-25">03:29 PM - 25 Nov. 2018</time>
             </div>
@@ -91,13 +91,13 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Trabajo práctico (TP) en PASCAL</p>
-                <p class="subtitle is-6">@Ackrom</p>
+                <p class="subtitle is-6"><a href="https://github.com/Ackrom/TP-Almacen-en-PASCAL">@Ackrom</a></p>
               </div>
             </div>
 
             <div class="content">
               Uno de mis primeros trabajos prácticos en el lenguaje deprogramación PASCAL.
-              <a href="#">#PASCAL</a>
+              <a href="https://es.wikipedia.org/wiki/Pascal_(lenguaje_de_programaci%C3%B3n)">#PASCAL</a>
               <br>
               <time datetime="2014">2014</time>
             </div>
@@ -120,14 +120,14 @@
               </div>
               <div class="media-content">
                 <p class="title is-4">Sistema PHP-MVC</p>
-                <p class="subtitle is-6">@Ackrom</p>
+                <p class="subtitle is-6"><a href="https://github.com/Ackrom">@Ackrom</a></p>
               </div>
             </div>
 
             <div class="content">
               El sistema nace como un trabajo para la universidad, lo elaboré junto con un grupo de compañeros en el año 2016.
-              <a href="#">#PHP </a> <a href="#">#MVC </a> <a href="#">#HTMLToPDF </a><a href="#">#ChartJS </a>
-              <a href="#">#DataTablesJS </a> <a href="#">#JQuery </a> <a href="#">#Bootstrap3 </a>
+              <a href="http://php.net/">#PHP </a> <a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador">#MVC </a> <a href="https://html2pdf.fr/es/home">#HTML2PDF </a><a href="https://www.chartjs.org/">#ChartJS </a>
+              <a href="https://datatables.net/">#DataTablesJS </a> <a href="https://jquery.com/">#JQuery </a> <a href="https://getbootstrap.com/">#Bootstrap3 </a>
               <br>
               <time datetime="2016">2016</time>
             </div>
@@ -145,7 +145,45 @@
   <div class="container">
     <h4 class="title has-text-centered">Trabajemos juntos</h4>
     <div class="column is-full has-text-centered buttons">
-      <a class="button is-link" routerLink="contacto">Puntos de contacto</a>
+      <!-- <a class="button is-info" [href]="link.direction" target="_blank" *ngFor="let link of socialLinks">{{link.name}}</a> -->
+      <a class="button is-link" href="https://www.linkedin.com/in/marco-ignacio-alvarez-tallada-a99747140/"
+        target="_blank">
+        <span class="icon">
+          <fa-icon [icon]="link"></fa-icon>
+        </span>
+        <span>
+          Linkedin
+        </span>
+      </a>
+      <a class="button is-link" href="https://www.facebook.com/profile.php?id=100008086350253" target="_blank">
+        <span class="icon">
+          <fa-icon [icon]="face"></fa-icon>
+        </span>
+        <span>
+          Facebook
+        </span>
+      </a>
+      <a class="button is-info" href="https://twitter.com/Marco_AT_" target="_blank">
+        <span class="icon">
+          <fa-icon [icon]="twitter"></fa-icon>
+        </span>
+        <span>
+          Twitter
+        </span>
+      </a>
+      <a class="button" href="https://github.com/Ackrom" target="_blank">
+        <span class="icon">
+            <fa-icon [icon]="github"></fa-icon>
+        </span>
+        <span>GitHub</span>
+      </a>
+      <a class="button is-success"  href="https://www.hackerrank.com/marco_at720" target="_blank">
+          <span class="icon is-small">
+              <fa-icon [icon]="hr"></fa-icon>
+          </span>
+          <span>HackerRank</span>
+      </a>
+      <a class="button is-link" routerLink="contacto">Envíame un email</a>
     </div>
 
   </div>
