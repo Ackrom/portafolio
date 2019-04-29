@@ -4,3 +4,26 @@ h1{
 h2{
     font-family:'Pridi', serif;
 }
+
+.foto_perfil{
+    background-image: url('/assets/foto_perfil.jpg');
+    background-position: -3px -26px;
+    background-size: cover;
+    border-radius:50% 50% 50% 50%;
+    width:250px;
+    height:250px;
+    margin: 10px auto;
+
+}
+
+.city{
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/city.jpg');
+    background-blend-mode: color-dodge;
+}
+
+.contraste{
+    background-color: #00000061; 
+    padding: 10px;
+}
